@@ -127,7 +127,8 @@ If you want to redo the test or had some other troubles, a simple `<baseurl>/rc`
 # Production deployment
 Use the docker-compose approach to get the services started.
 
-Default settings are performing python autoload, if the `main.py` is changed, for a production setup this should be changed (check `app/uwsgi.ini` and comment `py-autoreload = 2` line).
+Default settings are performing python autoload, if e.g. the `main.py` is changed.
+For a production setup this should be changed (check `app/uwsgi.ini` and comment `py-autoreload = 2` line).
 In addition for a real production system HTTPS is recommended, here [caddyserver](https://caddyserver.com/) could be used with e.g. a configuration `Caddyfile` in the following way:
 ```
 your.test.domain.name {
