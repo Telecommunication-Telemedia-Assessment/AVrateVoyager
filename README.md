@@ -19,7 +19,7 @@ The template syntax used is SimpleTemplate Engine, please checkout their [guide]
 ### General config
 The main config for the test system can be adapted in `app/config.json`:
 
-```json
+```
 {
     "welcome_msg": "video quality",  // welcome message used in the welcome screen
     "rating_template": "rating/acr.tpl", // used template for rating
