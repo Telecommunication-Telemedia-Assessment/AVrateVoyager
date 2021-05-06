@@ -141,6 +141,12 @@ You should further check the firewall settings on the production server.
 ## Developers
 * Steve Göring
 
+## Contributors
+* Maximilian Schaab
+* Serge Molina
+* Anton Schubert
+* John Dumke and Margaret Pinson (questionnaire form)
+
 
 ## Acknowledgments
 If you use this software in your research, please include a link to the repository and reference the following paper.
