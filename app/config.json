@@ -1,0 +1,9 @@
+{
+    "welcome_msg": "video quality",
+    "rating_template": "rating/acr.tpl",
+    "title": "video quality",
+    "max_stimuli": 150,
+    "cookie_secret": "x-files-forever",
+    "http_user_name": "stg7",
+    "http_user_password": "test"
+}
