@@ -3,12 +3,13 @@
 AvrateVoyager is an online based image/video/audio quality testing framework.
 The docker part is based on [bottle_docker_kit](https://github.com/stg7/bottle_docker_kit).
 The rating part is based on [avrateNG](https://github.com/Telecommunication-Telemedia-Assessment/avrateNG).
-If you want to perform a lab only test, then you should use avrateNG.
+If you want to perform a lab test, then you should use [avrateNG](https://github.com/Telecommunication-Telemedia-Assessment/avrateNG).
 The core idea of AvrateVoyager is to playout the stimuli within a webbrowser and this creates limitations for the 
 
 
 ## Requirements
 * linux based system with docker and docker-compose installed
+* for local development and export scripts you need python3 with numpy and pandas 
 
 
 ## Preparation
@@ -26,7 +27,25 @@ The first page after the welcome page is the questionnaire, here questions regar
 The questions can be adapted in the file `app/templates/questionnaire.tpl`, there are already examples provided, e.g. adapt the given question array to your needs.
 ```python
 questions = [
-    {'type': 'choice', 'question': 'What is your age?', 'qkey': 'user_age_range', 'options': ['', '< 18', '18 to 24', '25 to 29', '30 to 39', '40 to 49', '50 to 59', '60 to 69', '70+']},
+    {
+        'type': 'choice', 
+        'question': 'What is your age?', 
+        'qkey': 'user_age_range', 
+        'options': 
+                [
+                    '', 
+                    '< 18', 
+                    '18 to 24', 
+                    '25 to 29', 
+                    '30 to 39', 
+                    '40 to 49', 
+                    '50 to 59', 
+                    '60 to 69', 
+                    '70+'
+                ]
+    },
+    ....
+]
 
 ```
 `choice` and `input` fields are currently supported, important is that you define a unique `qkey`.
@@ -97,3 +116,20 @@ where <PORT> is the configured port in the `docker-compose.yml` file of AvrateVo
 You should further check the firewall settings on the production server.
 
 
+## Developers
+* Steve Göring
+
+
+## Acknowledgments
+If you use this software in your research, please include a link to the repository and reference the following paper.
+
+```
+@inproceedings{rao2021crowd,
+  title={Towards High Resolution Video Quality Assessment in the Crowd},
+  author={Rakesh {Rao Ramachandra Rao} and Steve G\"oring and Alexander Raake},
+  booktitle={Thirteens International Conference on Quality of Multimedia Experience (QoMEX)},
+}
+```
+
+## License
+GNU General Public License v3. See [LICENSE](LICENSE) file in this repository.
