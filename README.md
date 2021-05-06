@@ -128,13 +128,13 @@ If you want to redo the test or had some other troubles, a simple `<baseurl>/rc`
 Use the docker-compose approach to get the services started.
 
 Default settings are performing python autoload, if the `main.py` is changed, for a production setup this should be changed (check `app/uwsgi.ini` and comment `py-autoreload = 2` line).
-In addition for a real production system HTTPS is recommended, here [caddyserver](https://caddyserver.com/) could be used with e.g. a configuration in the following way (`Caddyfile`):
+In addition for a real production system HTTPS is recommended, here [caddyserver](https://caddyserver.com/) could be used with e.g. a configuration `Caddyfile` in the following way:
 ```
 your.test.domain.name {
     reverse_proxy 127.0.0.1:<PORT>
 }
 ```
-where <PORT> is the configured port in the `docker-compose.yml` file of AvrateVoyager, default value is 8080.
+where `<PORT>` is the configured port in the `docker-compose.yml` file of AvrateVoyager, the default value is 8080.
 You should further check the firewall settings on the production server.
 
 
