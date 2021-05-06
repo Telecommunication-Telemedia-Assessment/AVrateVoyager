@@ -413,6 +413,9 @@ def setup():
     config["playlist"] = sorted(list(glob.glob("./stimuli/*")))
     config["training"] = sorted(list(glob.glob("./train/*")))
     config["do_training"] = len(config["training"]) > 0
+    if len(config["playlist"])  == 0:
+        print("please store media files in app/stimuli")
+        sys.exit(0)
 
     print(f"""training: {config["do_training"]}; {len(config["training"])}""")
     print(f"""stimuli: {len(config["playlist"])}""")
