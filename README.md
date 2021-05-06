@@ -140,7 +140,7 @@ You should further check the firewall settings on the production server.
 
 
 ## Developers
-* Steve Göring
+* [Steve Göring](https://github.com/stg7)
 
 ## Contributors
 * Maximilian Schaab
@@ -162,3 +162,4 @@ If you use this software in your research, please include a link to the reposito
 
 ## License
 GNU General Public License v3. See [LICENSE](LICENSE) file in this repository.
+
