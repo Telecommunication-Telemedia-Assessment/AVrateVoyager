@@ -173,7 +173,8 @@ def instructions(config, db):
     return template(
         config["template_folder"] + "/instructions.tpl",
         title=config["title"],
-        stimuli=[config["playlist"][x] for x in playlist]
+        stimuli=[config["playlist"][x] for x in playlist],
+        next="/training/0" if config["do_training"] else "rate/0"
     )
 
 

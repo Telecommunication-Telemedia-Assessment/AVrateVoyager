@@ -17,6 +17,19 @@ Before you can perform your test some steps are required.
 The template syntax used is SimpleTemplate Engine, please checkout their [guide](https://bottlepy.org/docs/dev/stpl.html).
 
 ### General config
+The main config for the test system can be adapted in `app/config.json`:
+
+```json
+{
+    "welcome_msg": "video quality",  // welcome message used in the welcome screen
+    "rating_template": "rating/acr.tpl", // used template for rating
+    "title": "video quality", // page title
+    "max_stimuli": 150,  // in case you have more than max_stimuli files only max_stimuli files are presented to a participant
+    "cookie_secret": "x-files-forever",  // cookie to check whether the test has been done already
+    "http_user_name": "stg7",  // username for the /stats route
+    "http_user_password": "test" // password for the /stats route
+}
+```
 
 
 ### Start page
@@ -58,6 +71,10 @@ Please change the instructions according to your test design, see template file 
 
 On the questionnaire and instructions pages the stimuli for the user are precached to avoid loading during the conduction of the test, however this must be checked and verified and can result in long loading times for these pages.
 
+The test system continues either with the training or rating.
+Training is performed in case you have training files in the `app/train` folder, otherwise it will be skipped.
+
+
 ### Rating template
 The rating template consists of two parts,
 the first part is the presentation of the stimuli `app/templates/stimuli.tpl`, and the second part is the rating method.
@@ -66,12 +83,17 @@ The `app/templates/stimuli.tpl` template is currently only for audio and video f
 Adaption for video and audio tests are still required for the template, depending on the specific test design, e.g. playing the video in full screen or with a fixed resolution.
 
 
+The rating method is defined using the `app/config.json` file, modify the key `rating_template`.
+Currently only `rating/multi_slider.tpl` and `rating/acr.tpl` are supported.
+
+* `rating/multi_slider.tpl`: implements several slides for rating, just for demonstration
+* `rating/acr.tpl`: implements ACR rating scale
+
+
+
 ### Stimuli files
 All videos/image/audio files in the folder `app/stimuli` are used in the test.
 In case you add files to the `app/train` folder a training (where the results are not stored) with the files in this folder is performed before the tests starts.
-
-
-modify `app/config.json` to change the behavior of the test.
 
 
 ## Start (for development)

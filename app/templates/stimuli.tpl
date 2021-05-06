@@ -9,14 +9,6 @@
         <div class="col-12 align-top">
 
             % if is_audio:
-            <h5>Audio</h5>
-            % end
-
-            % if not is_audio:
-            <h5>Video</h5>
-            % end
-
-            % if is_audio:
             <audio id="stimuli" nocontrols onended="display_rating();hide_media_element();" preload="auto" oncanplaythrough="display_button()" style="display:none" oncontextmenu="return false;">
                 <source src="{{stimuli_file.replace("./", "/")}}" type="audio/flac">
                 Your browser does not support the audio element.

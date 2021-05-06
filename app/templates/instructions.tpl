@@ -24,7 +24,7 @@ Please maximize your browser window.
 </div>
 
 <p>
-<a class="btn btn-large btn-success" href="/training/0" onclick="check_screensize(event)"  id="next">next</a>
+<a class="btn btn-large btn-success" href="{{next}}" onclick="check_screensize(event)"  id="next">next</a>
 </p>
 
 

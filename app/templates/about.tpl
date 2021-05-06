@@ -1,7 +1,7 @@
 % rebase('templates/skeleton.tpl', title=title, use_noback=False)
 
 <h1 class="mt-5">About this test</h1>
-<p>This test is about spaciousness in music and video.</p>
+<p>This test is quality perception test.</p>
 
 This is a crowd sourcing based perception test and is completely voluntary and can be stopped at any time.
 
