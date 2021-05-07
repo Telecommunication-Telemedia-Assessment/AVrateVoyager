@@ -145,7 +145,7 @@ You should further check the firewall settings on the production server.
 ## Developers
 * [Steve Göring](https://github.com/stg7)
 
-If you like this software you can also [buy me a :coffee:](https://www.buymeacoffee.com/stg7)
+If you like this software you can also [donate me a :coffee:](https://ko-fi.com/binarys3v3n)
 
 ## Contributors
 * Maximilian Schaab
