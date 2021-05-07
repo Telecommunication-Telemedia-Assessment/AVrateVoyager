@@ -98,18 +98,19 @@ In case you add files to the `app/train` folder a training (where the results ar
 
 ## Start (for development)
 
-run
-```
+Build the docker container with
+```bash
 docker build -t avrateVoyaer .
 ```
 
-just run
-```
+Afterwards, you can run the service with
+```bash
 docker-compose up -d web
 ```
-and now your web-server is running at [http://localhost:8080](http://localhost:8080)
 
-In case you have python and the required libraries installed you can also run `app/main.py` directly without docker.
+Now your web-server is running at [http://localhost:8080](http://localhost:8080), remove `-d` flag for a non permanent service.
+
+In case you have python and the required libraries installed you can also run `app/main.py` directly without docker, this approach is just recommended for development.
 
 ## General online test hints
 * make sure the videos play with firefox and chrome, consider that most participants will not have high end equipment
@@ -117,17 +118,19 @@ In case you have python and the required libraries installed you can also run `a
 
 
 ## Behind the scene tricks
-In case you want to perform a test run in the system without filling out the forms, open `<baseurl>/dev` before, in most of the templates a second submission button will be shown now enabling to skip the filling out of the forms.
+In case you want to perform a test run in the system without filling the forms, open `<baseurl>/dev` before, in most of the templates a second submission button will be shown which now enables you to skip the filling of the forms.
 
 To see some basic statistics of your currently running test you can open `<baseurl>/stats` and login with the specified password and username in the `config.json`.
 
 If you want to redo the test or had some other troubles, a simple `<baseurl>/rc` will reset the cookies that prevent you from doing the test again.
 
+These magic routes should be removed/disabled for a production environment.
+
 
 # Production deployment
 Use the docker-compose approach to get the services started.
 
-Default settings are performing python autoload, if e.g. the `main.py` is changed.
+Default settings are performing python autoload, thus the service will reload in case the `main.py` is changed.
 For a production setup this should be changed (check `app/uwsgi.ini` and comment `py-autoreload = 2` line).
 In addition for a real production system HTTPS is recommended, here [caddyserver](https://caddyserver.com/) could be used with e.g. a configuration `Caddyfile` in the following way:
 ```
