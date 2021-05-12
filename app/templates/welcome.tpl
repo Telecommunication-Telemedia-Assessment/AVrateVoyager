@@ -37,5 +37,5 @@ For management purposes this page uses <strong>cookies</strong>.
 </p>
 <p>
 
-<a class="btn btn-large btn-success" href="/questionair"  id="start">start</a>
+<a class="btn btn-large btn-success" href="/questionnaire"  id="start">start</a>
 </p>

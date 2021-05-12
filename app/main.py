@@ -128,8 +128,8 @@ def get_user_id_playlist(db, config):
     return user_id, playlist
 
 
-@app.route('/questionair')
-def questionair(config, db):
+@app.route('/questionnaire')
+def questionnaire(config, db):
     """
     show demographics_form if required
     """
@@ -142,7 +142,7 @@ def questionair(config, db):
     response.set_cookie("training_done", "0", path="/")
 
     return template(
-        config["template_folder"] + "/questionair.tpl",
+        config["template_folder"] + "/questionnaire.tpl",
         title=config["title"],
         stimuli=[config["playlist"][x] for x in playlist],
         dev=request.get_cookie("dev") == "1"
@@ -150,16 +150,16 @@ def questionair(config, db):
 
 
 
-@app.route('/questionair', method='POST')
-def questionair(db, config):
+@app.route('/questionnaire', method='POST')
+def questionnaire(db, config):
     """
-    saves questionair info into sqlite3 table,
+    saves questionnaire info into sqlite3 table,
     all user information (user_id is key in tables) are stored as JSON string
     """
     user_id = int(request.get_cookie("user_id"))
 
-    db.execute('CREATE TABLE IF NOT EXISTS questionair (user_ID INTEGER PRIMARY KEY, answers_json TEXT);')
-    db.execute('INSERT INTO questionair VALUES (?,?);',(user_id, json.dumps(dict(request.forms))))
+    db.execute('CREATE TABLE IF NOT EXISTS questionnaire (user_ID INTEGER PRIMARY KEY, answers_json TEXT);')
+    db.execute('INSERT INTO questionnaire VALUES (?,?);',(user_id, json.dumps(dict(request.forms))))
     db.commit()
 
     redirect('/instructions')

@@ -29,10 +29,10 @@ main > .container {
   padding-bottom:40px;
 }
 
-.questionair-selection {
+.questionnaire-selection {
   margin-bottom: 1em
 }
-.questionair-question {
+.questionnaire-question {
   width: 550px; padding-top: 10px;
 }
 

@@ -5,7 +5,7 @@
 
 <h1 class="mt-5">Background Questions</h1>
 <p class="lead">Please answer the following questions before we start.</p>
-<form id="questionair" action="/questionair" method="post">
+<form id="questionnaire" action="/questionnaire" method="post">
 
   <!-- this form was developed by John Dumke and Margaret Pinson -->
 <%
@@ -23,8 +23,8 @@ questions = [
   <hr>
   % for q in questions:
     % if q["type"] == "choice":
-      <div class="input-group questionair-selection">
-        <span class="input-group-addon questionair-question" id="sizing-addon2">{{q['question']}}</span>
+      <div class="input-group questionnaire-selection">
+        <span class="input-group-addon questionnaire-question" id="sizing-addon2">{{q['question']}}</span>
 
         <select name="{{q['qkey']}}" class="form-control" required>
           % for option in q['options']:
@@ -39,8 +39,8 @@ questions = [
       </div>
     % end
     % if q["type"] == "input":
-      <div class="input-group questionair-selection">
-        <span class="input-group-addon questionair-question" id="sizing-addon2">{{q['question']}}</span>
+      <div class="input-group questionnaire-selection">
+        <span class="input-group-addon questionnaire-question" id="sizing-addon2">{{q['question']}}</span>
         % if "default" in q:
           <input name="{{q['qkey']}}" type="text" class="form-control" value="{{q['default']}}" required ></input>
         % else:
