@@ -100,7 +100,7 @@ In case you add files to the `app/train` folder a training (where the results ar
 
 Build the docker container with
 ```bash
-docker build -t avrateVoyaer .
+docker build -t avrateVoyager .
 ```
 
 Afterwards, you can run the service with
@@ -161,7 +161,7 @@ If you use this software in your research, please include a link to the reposito
 @inproceedings{rao2021crowd,
   title={Towards High Resolution Video Quality Assessment in the Crowd},
   author={Rakesh {Rao Ramachandra Rao} and Steve G\"oring and Alexander Raake},
-  booktitle={Thirteens International Conference on Quality of Multimedia Experience (QoMEX)},
+  booktitle={Thirteenth International Conference on Quality of Multimedia Experience (QoMEX)},
 }
 ```
 
