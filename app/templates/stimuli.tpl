@@ -47,12 +47,18 @@
 </div>
 
 <script>
-function image_loaded() {
-    console.log("image here");
+
+function store_window_size() {
     var h = window.innerHeight;
     var w = window.innerWidth;
     document.getElementById("ww").value = w;
     document.getElementById("wh").value = h;
+}
+
+function image_loaded() {
+    console.log("image here");
+    store_window_size();
+
     document.getElementById("pi").value ++;
     document.getElementById("info").style.display = "none";
     document.getElementById("playbutton").style.display = "none";
@@ -70,18 +76,15 @@ function play() {
     document.getElementById("stimuli").style.display = "inline";
     */
     stimuli.play();
-    var h = window.innerHeight;
-    var w = window.innerWidth;
-    document.getElementById("ww").value = w;
-    document.getElementById("wh").value = h;
+    store_window_size();
+
     console.log("hide button");
     document.getElementById("playbutton").style.display = "none";
     document.getElementById("info").style.display = "inline";
     document.getElementById("pi").value ++;
 }
+
 var stimuli_loaded = false;
-
-
 
 function display_button() {
     console.log("here we go");
@@ -98,7 +101,7 @@ function hide_media_element() {
 
     document.getElementById("playbutton").style.display = "inline";
     document.getElementById("info").style.display = "none";
-    return; // we dont hide it..
+    return; // we dont hide it.. only required for fullscreen
     var stimuli = document.getElementById("stimuli");
     if (stimuli.tagName != "AUDIO") {
         document.exitFullscreen();
