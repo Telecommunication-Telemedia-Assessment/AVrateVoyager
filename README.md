@@ -155,13 +155,20 @@ If you like this software you can also [donate me a :coffee:](https://ko-fi.com/
 
 
 ## Acknowledgments
-If you use this software in your research, please include a link to the repository and reference the following paper.
+If you use this software in your research, please include a link to the repository and reference one of the following paper.
 
 ```
 @inproceedings{rao2021crowd,
   title={Towards High Resolution Video Quality Assessment in the Crowd},
   author={Rakesh {Rao Ramachandra Rao} and Steve G\"oring and Alexander Raake},
   booktitle={Thirteenth International Conference on Quality of Multimedia Experience (QoMEX)},
+}
+
+@inproceedings{goering2021voyager,
+  title={AVRate Voyager: an open source online testing platform},
+  author={Steve G\"oring and Rakesh {Rao Ramachandra Rao} and Alexander Raake},
+  booktitle={MMSP},
+  note={under review}
 }
 ```
 
