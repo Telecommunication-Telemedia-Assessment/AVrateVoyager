@@ -1,7 +1,10 @@
 
 <div class="col-12" id="ratingform" >
 
-% is_audio = stimuli_file.split(".")[-1] in ["wav", "flac", "ogg", "aac", "mp3", "opus"]
+% is_audio = stimuli_file.split(".")[-1].lower() in ["wav", "flac", "ogg", "aac", "mp3", "opus"]
+% is_image = stimuli_file.split(".")[-1].lower() in ["jpg", "jpeg", "png", "gif", "tiff"]
+% is_video = not is_audio and not is_image
+
 
 
 <h5>Please rate the quality.</h5>
