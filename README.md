@@ -105,7 +105,7 @@ docker build -t avrateVoyager .
 
 Afterwards, you can run the service with
 ```bash
-docker-compose up -d web
+docker-compose up -d
 ```
 
 Now your web-server is running at [http://localhost:8080](http://localhost:8080), remove `-d` flag for a non permanent service.
