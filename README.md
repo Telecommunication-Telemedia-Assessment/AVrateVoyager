@@ -1,4 +1,4 @@
-# AvrateVoyager
+# AVrate Voyager
 
 AvrateVoyager is an online based image/video/audio quality testing framework.
 The docker part is based on [bottle_docker_kit](https://github.com/stg7/bottle_docker_kit).
