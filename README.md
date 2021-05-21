@@ -32,6 +32,7 @@ The main config for the test system can be adapted in `app/config.json`:
 }
 ```
 
+The `max_stimuli` specifies how many stimuli should be rated by one participant, if you want to rate all stimuli, then remove this from the config or set it to a value > number of stimuli.
 
 ### Start page
 For your specific test you should adapt the start page, so change the test in the `app/templates/welcome.tpl` file.
