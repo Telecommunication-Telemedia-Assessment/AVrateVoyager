@@ -14,6 +14,7 @@ The core idea of AvrateVoyager is to playout the stimuli within a webbrowser and
 
 ## Preparation
 Before you can perform your test some steps are required.
+E.g. changing the configuration and small adaptions in the templates used for the test.
 The template syntax used is SimpleTemplate Engine, please checkout their [guide](https://bottlepy.org/docs/dev/stpl.html).
 
 ### General config
