@@ -1,10 +1,10 @@
 # AVrate Voyager
 
-AvrateVoyager is an online based image/video/audio quality testing framework.
+AVrate Voyager is an online based image/video/audio quality testing framework.
 The docker part is based on [bottle_docker_kit](https://github.com/stg7/bottle_docker_kit).
 The rating part is based on [avrateNG](https://github.com/Telecommunication-Telemedia-Assessment/avrateNG).
 If you want to perform a lab test, then you should use [avrateNG](https://github.com/Telecommunication-Telemedia-Assessment/avrateNG).
-The core idea of AvrateVoyager is to playout the stimuli within a webbrowser and this creates limitations for the 
+The core idea of AVrate Voyager is to playout the stimuli within a webbrowser and this creates limitations for the 
 
 
 ## Requirements
@@ -140,7 +140,7 @@ your.test.domain.name {
     reverse_proxy 127.0.0.1:<PORT>
 }
 ```
-where `<PORT>` is the configured port in the `docker-compose.yml` file of AvrateVoyager, the default value is 8080.
+where `<PORT>` is the configured port in the `docker-compose.yml` file of AVrate Voyager, the default value is 8080.
 You should further check the firewall settings on the production server.
 
 
