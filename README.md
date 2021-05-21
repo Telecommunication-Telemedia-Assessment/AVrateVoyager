@@ -8,7 +8,7 @@ The core idea of AvrateVoyager is to playout the stimuli within a webbrowser and
 
 
 ## Requirements
-* linux based system with docker and docker-compose installed
+* linux based system with docker and docker-compose installed, it should work with both installed under windows
 * for local development and export scripts you need python3 with numpy and pandas 
 
 
