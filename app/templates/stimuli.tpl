@@ -16,7 +16,7 @@
             </audio>
             % end
             % if is_video:
-            <video id="stimuli" class="vstimuli col-12 align-top" nocontrols onended="display_rating();hide_media_element();" preload="auto" oncanplaythrough="display_button()" oncontextmenu="return false;">
+            <video id="stimuli" class="vstimuli col-12 align-top" nocontrols onended="display_rating();hide_media_element();video_ended()" preload="auto" oncanplaythrough="display_button()" oncontextmenu="return false;" onstalled="collect_stalling('stop')" onsuspend="collect_stalling('stop')" onplaying="collect_stalling('playing')">
                 <source src="{{stimuli_file.replace("./", "/")}}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -48,11 +48,40 @@
 
 <script>
 
+var stalling = []
+
+function collect_stalling(what) {
+    var video = document.getElementById("stimuli");
+    stall_event = {
+        "media_time": video.currentTime,
+        "start_timestamp": Date.now(),
+        "what": what,
+    };
+    stalling.push(stall_event);
+}
+
+function video_ended() {
+    var video = document.getElementById("stimuli");
+    var qmeta = video.getVideoPlaybackQuality();
+
+    qmeta_json = {
+        "droppedVideoFrames": qmeta.droppedVideoFrames,
+        "totalVideoFrames": qmeta.totalVideoFrames,
+        "stalling_events": stalling
+    }
+    document.getElementById("quality_meta").value = JSON.stringify(qmeta_json);
+    //console.log(qmeta_json);
+}
+
 function store_window_size() {
     var h = window.innerHeight;
     var w = window.innerWidth;
     document.getElementById("ww").value = w;
     document.getElementById("wh").value = h;
+
+    // store zoom factor (see https://stackoverflow.com/a/45191169)
+    document.getElementById("wz").value =  window.devicePixelRatio;
+
 }
 
 function image_loaded() {
@@ -65,6 +94,7 @@ function image_loaded() {
     document.getElementById("loader").style.display = "none";
     stimuli_loaded = true;
 }
+
 function play() {
 
     var stimuli = document.getElementById("stimuli");

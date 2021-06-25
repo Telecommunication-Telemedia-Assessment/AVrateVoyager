@@ -116,11 +116,7 @@ groups = [
       </tbody>
     </table>
 
-    <input type="hidden" value="{{stimuli_file}}" id="stimuli_file" name="stimuli_file" />
-    <input type="hidden" value="{{stimuli_idx}}" id="stimuli_idx" name="stimuli_idx" />
-    <input type="hidden" value="-1" id="ww" name="ww" />
-    <input type="hidden" value="-1" id="wh" name="wh" />
-    <input type="hidden" value="0" id="pi" name="pi" />
+    % include('templates/rating/common.tpl', stimuli_file=stimuli_file)
 
 
     <button type="submit" id="submitButton" class="btn btn-success btn-block" onclick="check_form(event)">submit</button>
