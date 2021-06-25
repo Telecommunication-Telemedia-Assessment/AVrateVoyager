@@ -16,7 +16,7 @@
             </audio>
             % end
             % if is_video:
-            <video id="stimuli" class="vstimuli col-12 align-top" nocontrols onended="display_rating();hide_media_element();video_ended()" preload="auto" oncanplaythrough="display_button()" oncontextmenu="return false;" onstalled="collect_stalling('stop')" onsuspend="collect_stalling('stop')" onplaying="collect_stalling('playing')">
+            <video id="stimuli" class="vstimuli col-12 align-top" nocontrols onended="display_rating();hide_media_element();video_ended()" preload="auto" oncanplaythrough="display_button()" oncontextmenu="return false;" onstalled="collect_stalling('stop')" onsuspend="collect_stalling('stop')" onplaying="collect_stalling('play')">
                 <source src="{{stimuli_file.replace("./", "/")}}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
