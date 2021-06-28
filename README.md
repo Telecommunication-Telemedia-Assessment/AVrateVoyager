@@ -100,12 +100,7 @@ In case you add files to the `app/train` folder a training (where the results ar
 
 ## Start (for development)
 
-Build the docker container with
-```bash
-docker build -t avrateVoyager .
-```
-
-Afterwards, you can run the service with
+You can run the service with
 ```bash
 docker-compose up -d
 ```
