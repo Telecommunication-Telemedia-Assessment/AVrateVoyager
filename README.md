@@ -163,9 +163,11 @@ If you use this software in your research, please include a link to the reposito
 
 @inproceedings{goering2021voyager,
   title={AVRate Voyager: an open source online testing platform},
-  author={Steve G\"oring and Rakesh {Rao Ramachandra Rao} and Alexander Raake},
-  booktitle={MMSP},
-  note={under review}
+  author={Steve G\"oring and Rakesh {Rao Ramachandra Rao} and Stephan Fremerey and Alexander Raake},
+  year={2021},
+  booktitle={2021 IEEE 23st International Workshop on Multimedia Signal Processing (MMSP)},
+  pages={1--6},
+  organization={IEEE}
 }
 ```
 
