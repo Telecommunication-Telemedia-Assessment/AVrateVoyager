@@ -98,6 +98,7 @@ All videos/image/audio files in the folder `app/stimuli` are used in the test.
 In case you add files to the `app/train` folder a training (where the results are not stored) with the files in this folder is performed before the tests starts.
 
 
+
 ## Start (for development)
 
 You can run the service with
@@ -112,6 +113,8 @@ In case you have python and the required libraries installed you can also run `a
 ## General online test hints
 * make sure the videos play with firefox and chrome, consider that most participants will not have high end equipment
 * try to reduce the overall file size of all stimuli, e.g. approx 500MB for 180 stimuli where only 30 were asked per participant was ok in some of our tests
+
+For videos it is important that you encode them with 4:2:0 8 bit and a suitable CRF value using H.264, otherwise e.g. Firefox will not be able to play the videos.
 
 
 ## Behind the scene tricks
