@@ -6,7 +6,7 @@
 
 
 
-<p>This is a online-based perception test and is completely voluntary and can be stopped at any time. </p>
+<p>This is an online-based perception test and is completely voluntary and can be stopped at any time. </p>
 <p>The first part contains some background questions, then the main part starts.
 
 % if training:
