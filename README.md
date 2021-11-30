@@ -7,6 +7,7 @@ If you want to perform a lab test, then you should use [avrateNG](https://github
 The core idea of AVrate Voyager is to playout the stimuli within a webbrowser and collect all ratings and answers in a database.
 However this may create some limitations for the stimuli that are considered, e.g. they must be playable with a webbrowser which requires, e.g., for videos a specific encoding and video codec.
 
+A brief overview of AVrate Voyager can be seen in the this [video](https://stg7.github.io/pdfs/2021/avrate_voyager_video.mp4) or these [slides](https://stg7.github.io/pdfs/2021/avrate_voyager_presentation.pdf). 
 
 ## Requirements
 * linux based system with docker and docker-compose installed, it should work with both installed under windows
