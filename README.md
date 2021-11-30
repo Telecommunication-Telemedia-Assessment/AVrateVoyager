@@ -4,7 +4,8 @@ AVrate Voyager is an online based image/video/audio quality testing framework.
 The docker part is based on [bottle_docker_kit](https://github.com/stg7/bottle_docker_kit).
 The rating part is based on [avrateNG](https://github.com/Telecommunication-Telemedia-Assessment/avrateNG).
 If you want to perform a lab test, then you should use [avrateNG](https://github.com/Telecommunication-Telemedia-Assessment/avrateNG).
-The core idea of AVrate Voyager is to playout the stimuli within a webbrowser and this creates limitations for the 
+The core idea of AVrate Voyager is to playout the stimuli within a webbrowser and collect all ratings and answers in a database.
+However this may create some limitations for the stimuli that are considered, e.g. they must be playable with a webbrowser which requires, e.g., for videos a specific encoding and video codec.
 
 
 ## Requirements
@@ -14,11 +15,11 @@ The core idea of AVrate Voyager is to playout the stimuli within a webbrowser an
 
 ## Preparation
 Before you can perform your test some steps are required.
-E.g. changing the configuration and small adaptions in the templates used for the test.
+E.g. changing the configuration and small adaptions of the html-templates for the test.
 The template syntax used is SimpleTemplate Engine, please checkout their [guide](https://bottlepy.org/docs/dev/stpl.html).
 
 ### General config
-The main config for the test system can be adapted in `app/config.json`:
+The main configuration for the test system can be adapted in `app/config.json`:
 
 ```
 {
@@ -35,7 +36,7 @@ The main config for the test system can be adapted in `app/config.json`:
 The `max_stimuli` specifies how many stimuli should be rated by one participant, if you want to rate all stimuli, then remove this from the config or set it to a value > number of stimuli.
 
 ### Start page
-For your specific test you should adapt the start page, so change the test in the `app/templates/welcome.tpl` file.
+For your specific test you should adapt the start page, so change the text in the `app/templates/welcome.tpl` file.
 
 ### Questionnaire
 The first page after the welcome page is the questionnaire, here questions regarding the background of the participant are collected.
@@ -64,7 +65,7 @@ questions = [
 
 ```
 `choice` and `input` fields are currently supported, important is that you define a unique `qkey`.
-`qkey` is used to store the result of the question.
+`qkey` is used to store the result of the question in the database.
 
 
 
@@ -73,8 +74,8 @@ Please change the instructions according to your test design, see template file 
 
 On the questionnaire and instructions pages the stimuli for the user are precached to avoid loading during the conduction of the test, however this must be checked and verified and can result in long loading times for these pages.
 
-The test system continues either with the training or rating.
-Training is performed in case you have training files in the `app/train` folder, otherwise it will be skipped.
+The test system continues either with the training or rating phase.
+Training is performed in case you have training files in the `app/train` folder stored, otherwise it will be skipped.
 
 
 ### Rating template
@@ -114,7 +115,7 @@ In case you have python and the required libraries installed you can also run `a
 * make sure the videos play with firefox and chrome, consider that most participants will not have high end equipment
 * try to reduce the overall file size of all stimuli, e.g. approx 500MB for 180 stimuli where only 30 were asked per participant was ok in some of our tests
 
-For videos it is important that you encode them with 4:2:0 8 bit and a suitable CRF value using H.264, otherwise e.g. Firefox will not be able to play the videos.
+For videos it is important that you encode them with **4:2:0 8** bit and a suitable CRF value using **H.264**, otherwise e.g. Firefox will not be able to play the videos.
 
 
 ## Behind the scene tricks
