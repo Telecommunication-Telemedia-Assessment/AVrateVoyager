@@ -128,7 +128,7 @@ If you want to redo the test or had some other troubles, a simple `<baseurl>/rc`
 These magic routes should be removed/disabled for a production environment.
 
 
-# Production deployment
+## Production deployment
 Use the docker-compose approach to get the services started.
 
 Default settings are performing python autoload, thus the service will reload in case the `main.py` is changed.
@@ -141,6 +141,12 @@ your.test.domain.name {
 ```
 where `<PORT>` is the configured port in the `docker-compose.yml` file of AVrate Voyager, the default value is 8080.
 You should further check the firewall settings on the production server.
+
+
+## Tools folder
+In the `tools` folder some useful command line tools for pre-processing videos/images/audio files are stored, e.g.:
+
+* `convert_videos_to_cc_versions.py`: converts a UHD-1/4K video to a 540p center cropped CRF 22 H.264 version that can be used for an online test (this tools has been used in the paper `rao2021crowd`)
 
 
 ## Developers
