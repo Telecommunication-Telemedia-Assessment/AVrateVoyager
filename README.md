@@ -115,7 +115,7 @@ In case you have python and the required libraries installed you can also run `a
 * make sure the videos play with firefox and chrome, consider that most participants will not have high end equipment
 * try to reduce the overall file size of all stimuli, e.g. approx 500MB for 180 stimuli where only 30 were asked per participant was ok in some of our tests
 
-For videos it is important that you encode them with **4:2:0 8** bit and a suitable CRF value using **H.264**, otherwise e.g. Firefox will not be able to play the videos.
+For videos it is important that you encode them with **4:2:0 8 bit** and a suitable CRF value using **H.264**, otherwise e.g. Firefox will not be able to play the videos.
 
 
 ## Behind the scene tricks
