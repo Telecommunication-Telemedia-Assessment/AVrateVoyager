@@ -168,13 +168,13 @@ If you use this software in your research, please include a link to the reposito
 ```
 @inproceedings{rao2021crowd,
   title={Towards High Resolution Video Quality Assessment in the Crowd},
-  author={Rakesh {Rao Ramachandra Rao} and Steve G\"oring and Alexander Raake},
+  author={Rakesh {Rao Ramachandra Rao} and Steve Göring and Alexander Raake},
   booktitle={Thirteenth International Conference on Quality of Multimedia Experience (QoMEX)},
 }
 
 @inproceedings{goering2021voyager,
   title={AVRate Voyager: an open source online testing platform},
-  author={Steve G\"oring and Rakesh {Rao Ramachandra Rao} and Stephan Fremerey and Alexander Raake},
+  author={Steve Göring and Rakesh {Rao Ramachandra Rao} and Stephan Fremerey and Alexander Raake},
   year={2021},
   booktitle={2021 IEEE 23st International Workshop on Multimedia Signal Processing (MMSP)},
   pages={1--6},
