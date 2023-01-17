@@ -6,7 +6,7 @@
 
 
 
-<p>This is an online-based perception test and is completely voluntary and can be stopped at any time. </p>
+<p>This is an online-based perception test and it is completely voluntary and can be stopped at any time. </p>
 <p>The first part contains some background questions, then the main part starts.
 
 % if training:
@@ -22,7 +22,7 @@ Further details on the instructions are shown after the background questions.
 The test will take approximately 10-15 minutes. In case you need a short break in-between, you can stop at any time but only when you keep the browser open.
 </p>
 <p>
-You need a screen e.g. at least 1280x720 resolution, and a quiet environment without any distractions.
+You need a screen with e.g. at least 1280x720 resolution, and a quiet environment without any distractions.
 As browser please use Chrome or Firefox, Safari may cause problems.
 </p>
 
