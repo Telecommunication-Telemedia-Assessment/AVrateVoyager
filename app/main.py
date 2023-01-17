@@ -364,7 +364,7 @@ def main(db, config):
 @app.route('/rc')
 def reset_cookies(db, config):
     """
-    perfrom a reset of the cookies, this is only for internal usage,
+    perform a reset of the cookies, this is only for internal usage,
     in case avrateNG needs to be resetted
     """
     for cookie in request.cookies:
@@ -375,8 +375,7 @@ def reset_cookies(db, config):
 @app.route('/dev')
 def dev(db, config):
     """
-    perfrom a reset of the cookies, this is only for internal usage,
-    in case avrateNG needs to be resetted
+    development mode
     """
     response.set_cookie("dev", "1", path="/")
     redirect('/')
