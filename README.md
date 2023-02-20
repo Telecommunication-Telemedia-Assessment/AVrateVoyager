@@ -165,7 +165,7 @@ If you like this software you can also [donate me a :coffee:](https://ko-fi.com/
 ## Acknowledgments
 If you use this software in your research, please include a link to the repository and reference one of the following paper.
 
-```
+```bibtex
 @inproceedings{rao2021crowd,
   title={Towards High Resolution Video Quality Assessment in the Crowd},
   author={Rakesh {Rao Ramachandra Rao} and Steve Göring and Alexander Raake},
