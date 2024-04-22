@@ -106,6 +106,14 @@ def static(filename):
 
 def get_user_id_playlist(db, config):
     """ read user id from database """
+    if request.get_cookie("user_id") is not None:
+        # user id has already been created
+        user_id = int(request.get_cookie("user_id"))
+        res = db.execute('select * from user_playlist where user_id=?;', (user_id,)).fetchone()
+        if res is not None:
+            # otherwise use_id is somehow not properly registered
+            playlist = json.loads(res["playlist"])
+            return user_id, playlist
     if not db.execute("SELECT * FROM sqlite_master WHERE type='table' AND name='ratings'").fetchone():
         user_id = 1 # if ratings table does not exist: first user_id = 1
     else:
