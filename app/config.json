@@ -1,6 +1,6 @@
 {
     "welcome_msg": "video quality",
-    "rating_template": "rating/acr.tpl",
+    "rating_template": "rating/questionnaire_post-trial.tpl",
     "title": "video quality",
     "max_stimuli": 150,
     "cookie_secret": "x-files-forever",
