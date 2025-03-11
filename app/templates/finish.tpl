@@ -5,6 +5,7 @@
 
 <a class="btn btn-large btn-success" href="/rc"  id="start">Restart (next Participant)</a>
 
+<p>
 % if feedback:
 If you want to give some feedback, you can do it while filling out the following form.
 <form id="feedback_form" action="/finish" method="post">
@@ -17,3 +18,4 @@ If you want to give some feedback, you can do it while filling out the following
     <button type="submit" id="submitButton" class="btn btn-success btn-block">submit</button>
 </form>
 % end
+</p>
