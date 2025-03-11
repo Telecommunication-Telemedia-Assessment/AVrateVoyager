@@ -3,6 +3,7 @@
 <h1 class="mt-5">You're done :)</h1>
 <p >{{text}}</p>
 
+<a class="btn btn-large btn-success" href="/rc"  id="start">Restart (next Participant)</a>
 
 % if feedback:
 If you want to give some feedback, you can do it while filling out the following form.
