@@ -89,12 +89,12 @@ questions = [
               <td style="width:50%">
                 <input
                     type="range"
-                    class="form-range slider"
+                    class="slider"
                     name="range_{{adj1}}_{{adj2}}"
                     id="range_{{adj1}}_{{adj2}}"
                     min="1"
-                    max="7"
-                    value="4"
+                    max="21"
+                    value="1"
                     oninput="slider_change(this)"
                     onchange="slider_change(this)"
                     list="steplist"
@@ -107,6 +107,20 @@ questions = [
                   <option>5</option>
                   <option>6</option>
                   <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
               </datalist>
               </td>
               <td style="width:8em; padding-right:2em">7</th>
