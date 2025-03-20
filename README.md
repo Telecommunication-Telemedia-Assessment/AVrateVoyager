@@ -185,4 +185,23 @@ If you use this software in your research, please include a link to the reposito
 ## License
 GNU General Public License v3. See [LICENSE](LICENSE) file in this repository.
 
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="
+      https://api.star-history.com/svg?repos=Telecommunication-Telemedia-Assessment/AVrateVoyager&type=Date&theme=dark
+    "
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="
+      https://api.star-history.com/svg?repos=Telecommunication-Telemedia-Assessment/AVrateVoyager&type=Date
+    "
+  />
+  <img
+    alt="Star History Chart"
+    src="https://api.star-history.com/svg?repos=Telecommunication-Telemedia-Assessment/AVrateVoyager&type=Date"
+  />
+</picture>
+
 ![Star History](https://api.star-history.com/svg?repos=Telecommunication-Telemedia-Assessment/AVrateVoyager&type=Date)
