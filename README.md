@@ -11,7 +11,8 @@ A brief overview of AVrate Voyager can be seen in the this [video](https://stg7.
 
 ## Requirements
 * linux based system with docker and docker-compose installed, it should work with both installed under windows
-* for local development and export scripts you need python3 with numpy and pandas 
+* for local development and export scripts you need python3 with numpy, pandas, and legacy-cgi
+    * to install it run `python -m pip install numpy pandas legacy-cgi`
 
 
 ## Preparation
